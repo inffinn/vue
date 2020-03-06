@@ -3,26 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "vue-cli-service serve --open"
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.2",
+    "vue-property-decorator": "^8.3.0",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-typescript": "^4.2.3",
+    "@vue/cli-plugin-vuex": "^4.2.3",
     "@vue/cli-service": "~4.2.0",
     "@vue/eslint-config-standard": "^5.1.0",
+    "@vue/eslint-config-typescript": "^5.0.1",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.1.2",
+    "eslint-plugin-vue": "^6.2.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "~3.7.5",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -32,12 +47,18 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "@vue/standard"
+      "@vue/standard",
+      "@vue/typescript"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@typescript-eslint/parser"
     },
-    "rules": {}
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "indent": 2
+    }
   },
   "browserslist": [
     "> 1%",
